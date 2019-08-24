@@ -1,7 +1,26 @@
-# Getting Started
+****# Getting Started
 
 ### Reference Documentation
 For further reference, please consider the following sections:
+
+#Step to Run Demo Project 
+1. Install Redis
+2. Run redis server
+3. Update redis server port in application.yml file 
+4. Run : mvn clean package 
+5. Run : java -jar target/springdataredis-0.0.1-SNAPSHOT.jar application.yml
+
+#Curl for Publish Data:
+
+curl -X POST 
+  http://localhost:8080/redis 
+  -H 'Content-Type: application/json' 
+  -d '{
+"id": 1,
+"name": "Himasnhu",
+"address": "Delhi"
+}'
+
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Web Starter](https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/htmlsingle/#boot-features-developing-web-applications)
